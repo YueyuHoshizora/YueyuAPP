@@ -58,7 +58,7 @@
 
 如對本政策有任何疑問或建議，請透過以下方式聯絡我們：
 
-- Email：`yueyuhoshizora@example.com`
+- Email：`yueyuhoshizora@gmail.com.com`
 - X（Twitter）：[@yueyuhoshizora](https://twitter.com/yueyuhoshizora)
 
 ---
