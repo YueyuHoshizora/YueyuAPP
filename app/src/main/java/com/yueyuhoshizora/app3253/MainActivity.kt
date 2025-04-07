@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        webView = findViewById(R.id.mainWebView)
+        webView = findViewById(R.id.webView)
 
         // 啟用 JavaScript
         val webSettings: WebSettings = webView.settings
