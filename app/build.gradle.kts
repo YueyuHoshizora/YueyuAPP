@@ -11,8 +11,8 @@ android {
         applicationId = "com.yueyuhoshizora.app3253"
         minSdk = 33
         targetSdk = 35
-        versionCode = 25040701
-        versionName = "1.1.3"
+        versionCode = 25040702
+        versionName = "1.2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -43,4 +43,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation("com.google.android.play:app-update:2.1.0")
+    implementation("com.google.android.material:material:1.10.0")
+
 }
