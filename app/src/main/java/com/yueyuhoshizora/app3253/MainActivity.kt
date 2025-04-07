@@ -1,6 +1,7 @@
 package com.yueyuhoshizora.app3253
 
 import android.os.Bundle
+import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -10,28 +11,36 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var webView: WebView
 
+    private val urlMap = mapOf(
+        "code" to "https://github.com/YueyuHoshizora",
+        "video" to "https://www.youtube.com/channel/UCLXRu8yatzwjUpaFD1o07KA",
+        "home" to "https://yueyuhoshizora.carrd.co",
+        "music" to "https://yueyuhoshizora.music",
+        "art" to "https://www.pixiv.net/users/73186283"
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         supportActionBar?.hide()
 
         webView = findViewById(R.id.webView)
 
-        // 啟用 JavaScript
         val webSettings: WebSettings = webView.settings
         webSettings.javaScriptEnabled = true
         webSettings.domStorageEnabled = true
         webSettings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
 
-        // 讓 WebView 在 App 內部開啟，而不是跳到外部瀏覽器
         webView.webViewClient = WebViewClient()
-
-        // 載入指定網址
-        webView.loadUrl("https://yueyuhoshizora.carrd.co")
+        webView.loadUrl(urlMap["home"]!!)
     }
 
-    // 讓 WebView 支援返回上一頁
+    fun onFooterClick(view: View) {
+        val key = view.tag as? String ?: return
+        val url = urlMap[key] ?: return
+        webView.loadUrl(url)
+    }
+
     override fun onBackPressed() {
         if (webView.canGoBack()) {
             webView.goBack()
