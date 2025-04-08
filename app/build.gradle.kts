@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -11,8 +12,8 @@ android {
         applicationId = "com.yueyuhoshizora.app3253"
         minSdk = 33
         targetSdk = 35
-        versionCode = 25040801
-        versionName = "1.2.2"
+        versionCode = 25040901
+        versionName = "1.3.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -46,5 +47,10 @@ dependencies {
 
     implementation("com.google.android.play:app-update:2.1.0")
     implementation("com.google.android.material:material:1.10.0")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
+    kapt ("com.github.bumptech.glide:compiler:4.15.1")
 
 }
