@@ -12,8 +12,8 @@ android {
         applicationId = "com.yueyuhoshizora.app3253"
         minSdk = 33
         targetSdk = 35
-        versionCode = 25040902
-        versionName = "1.3.1"
+        versionCode = 25040903
+        versionName = "1.3.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
