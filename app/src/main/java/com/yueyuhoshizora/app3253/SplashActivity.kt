@@ -18,7 +18,7 @@ import com.google.android.play.core.appupdate.AppUpdateOptions
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var appUpdateManager: AppUpdateManager
-    private val splashDelayMillis: Long = 5000
+    private val splashDelayMillis: Long = 3000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
